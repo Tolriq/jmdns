@@ -299,6 +299,9 @@ public abstract class DNSRecord extends DNSEntry {
             if ((this.getAddress() == null) && (address.getAddress() != null)) {
                 return false;
             }
+            if (this.getAddress() == null) {
+                return true;
+            }
             return this.getAddress().equals(address.getAddress());
         }
 
